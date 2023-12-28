@@ -1,4 +1,6 @@
 import React from 'react'
+import { RiDeleteBin6Fill } from "react-icons/ri";
+import { FaRegEdit } from "react-icons/fa";
 
 const EmpTable = ({empDetails, handleDelete, handleEdit}) => {
     
@@ -26,8 +28,10 @@ const EmpTable = ({empDetails, handleDelete, handleEdit}) => {
                 <td>{value.emailId}</td>
                 <td>{value.location}</td>
                 <td>
-                    <button className='Delete' onClick={()=> handleDelete(value.id)}>Delete</button>
-                    <button className='Edit' onClick={()=> handleEdit(value.id)}>Edit</button>
+                <RiDeleteBin6Fill className='Delete' onClick={()=> handleDelete(value.id)}/>
+                <FaRegEdit className='Edit'  onClick={()=> handleEdit(value.id)} />
+                    {/* <button className='Delete' onClick={()=> handleDelete(value.id)}>Delete</button> */}
+                   {/*  <button className='Edit' onClick={()=> handleEdit(value.id)}>Edit</button>  */}
                 </td>
               </tr>
             )

@@ -15,14 +15,6 @@
       "designation": "trainee",
       "emailId": "saranraj@gmail.com",
       "location": "trt"
-    },
-    {
-      "id": 5,
-      "name": "ram kumar",
-      "mobileNo": "88836373",
-      "designation": "qqq",
-      "emailId": "fff@gmail.com",
-      "location": "tt"
     }
   ]
 }

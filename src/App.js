@@ -5,6 +5,10 @@ import EmpTable from "./EmpTable";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import EditTable from "./EditTable";
+import Nav from "./Nav";
+import Info from "./Info";
+import About from "./About";
+import { Routes,Route } from "react-router-dom";
 function App() {
 
   const baseURL ="http://localhost:3500"
@@ -110,6 +114,11 @@ function App() {
   return (
     <div className="App">
       <Header title={title} />
+      <Nav/>
+      <Routes>
+
+      <Route path="/" element={
+      <div>
       {!editData.id ? (
       <EmployeeForm 
         handleSubmit={handleSubmit} 
@@ -134,7 +143,12 @@ function App() {
         handleDelete={handleDelete}
          handleEdit={handleEdit} 
       />
-      
+      </div>
+      } />
+      <Route path="/Info" element={<Info empDetails={empDetails} />} />
+      <Route path="/About" element={<About/>} />
+      </Routes>
+
       <Footer/>
     </div>
   );
